@@ -50,7 +50,6 @@ add_subdirectory(${SOURCE_NAME})
 # Create Library
 # TODO : Include your new file here!
 add_library(homework STATIC
-    code.cpp
     ${src_SOURCES}
     )
 
