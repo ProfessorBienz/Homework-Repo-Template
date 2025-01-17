@@ -10,10 +10,10 @@ You can clone the repository with 'git clone \<repository\_name\>.  The reposito
 The initial repository for this homework is in the branch called 'homework0'.  You can get access to this code with the command 'git checkout homework0'
 
 ### 1.c) Pull submodule changes
-All homework repositories will contain a submodule called 'cs_481_hw_src'.  Changes (such as additions to the unit tests) may be made to this submodule at any time.  Get access to the most up-to-date submodule repository with the following two commands:
+All homework repositories will contain a folder called 'Homework-Source-Template'.  This folder is called a submodule, because it points to a separate Github repository that you are unable to edit.  Changes (such as additions to the unit tests) may be made to this submodule at any time.  Get access to the most up-to-date submodule repository with the following two commands:
 - git submodule init
 - git submodule update --remote
-  
+**Make sure to type these commands anytime you start a new homework to make sure you have the most up-to-date code at that time.**
 
 ## Part 2 : CMake
 CMake is a group of tools for compiling code on any given computer.  All homeworks for the course will be compiled with CMake.  You will need to make minimal changes to CMake throughout the semester, but it is very important to understand the basics of how CMake works.
@@ -30,8 +30,8 @@ To configure your compilation, type 'cmake ..' from within the build directory
 ### 2.d) Compile the codebase
 After the configuration successfully completes, you can compile the library with the command 'make'.  You should see an error that the linker cannot find the function 'return0()'.
   
-### 2.e) Create a C or C++ file within the main repository directory (e.g. 'cd ..' from the build directory).  Edit this file to include the header file 'src.hpp'.  Create a method called 'int return0()' that returns the number 0.
-To include src.hpp, you will need to add the following "#include "src.hpp"
+### 2.e) Create a C or C++ file within the main repository directory (e.g. 'cd ..' from the build directory). 
+Edit this file to include the header file 'src.hpp'.  Create a method called 'int return0()' that returns the number 0.  To include src.hpp, you will need to add the following `#include "src.hpp`
   
 ### 2.f) Add new file to library
 Open the file CMakeLists.txt.  Near the bottom, a library called 'homework' is created.  Add your file to this library (e.g. below ${SRC_SOURCES} add \<your\_filename\>)
