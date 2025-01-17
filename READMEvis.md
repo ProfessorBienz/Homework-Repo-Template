@@ -5,15 +5,20 @@ GitHub Classroom will be used for all homework assignments.  You will be given a
 
 ### 1.a) Clone the repository to a local machine
 You can clone the repository with 'git clone \<repository\_name\>.  The repository name can be found by clicking the green 'Code' button.  Click on the HTTPS tab if you use Github token authentification, and the SSH tab if you have setup an SSH key.  For more information on authentification methods, click here: [Instructions for Creating Tokens](CreateToken.md)
+![alt text](img/0_repo_addr.png)
+![alt text](img/1_clone.png)
 
 ### 1.b) Checkout the homework0 branch
 The initial repository for this homework is in the branch called 'homework0'.  You can get access to this code with the command 'git checkout homework0'
+![alt text](img/2_main.png)
+![alt text](img/3_homework0.png)
 
 ### 1.c) Pull submodule changes
 All homework repositories will contain a folder called 'Homework-Source-Template'.  This folder is called a submodule, because it points to a separate Github repository that you are unable to edit.  Changes (such as additions to the unit tests) may be made to this submodule at any time.  Get access to the most up-to-date submodule repository with the following two commands:
 - git submodule init
 - git submodule update --remote
 **Make sure to type these commands anytime you start a new homework to make sure you have the most up-to-date code at that time.**
+![alt text](img/4_submodule.png)
 
 ## Part 2 : CMake
 CMake is a group of tools for compiling code on any given computer.  All homeworks for the course will be compiled with CMake.  You will need to make minimal changes to CMake throughout the semester, but it is very important to understand the basics of how CMake works.
@@ -26,15 +31,19 @@ Change the current directory to build (e.g. cd build)
   
 ### 2.c) Configure the current CMake directory
 To configure your compilation, type 'cmake ..' from within the build directory
+![alt text](img/5_configure.png)
+![alt text](img/6_configure.png)
   
 ### 2.d) Compile the codebase
 After the configuration successfully completes, you can compile the library with the command 'make'.  You should see an error that the linker cannot find the function 'return0()'.
+![alt text](img/7_compile.png)
   
 ### 2.e) Create a C or C++ file within the main repository directory (e.g. 'cd ..' from the build directory). 
 Edit this file to include the header file 'src.hpp'.  Create a method called 'int return0()' that returns the number 0.  To include src.hpp, you will need to add the following `#include "src.hpp`
   
 ### 2.f) Add new file to library
 Open the file CMakeLists.txt.  Near the bottom, a library called 'homework' is created.  Add your file to this library (e.g. below ${SRC_SOURCES} add \<your\_filename\>)
+![alt text](img/8_cmake.png)
   
 ### 2.g) Reconfigure and compile code
 Go back into the build directory and run the configuration and compile commands again.  If you get an error, this may be due to an old cache.  In this case, remove the build directory (e.g. 'rm -rf build') and redo steps 2.a through 2.d.  The library and unit tests should now compile successfully.
@@ -42,16 +51,14 @@ Go back into the build directory and run the configuration and compile commands 
 #### Congratulations, you now know the basics of CMake!
   
 ## Part 3 : Googletest
-Googletest will be used to autograde parts of assignments throughout this course.  You will not need to use googletest for the homeworks.  However, you will have the option of submitting your own tests for each homework for extra credit.
+Googletest will be used to autograde parts of assignments throughout this course.  You will not need to write googletest for the homeworks.  However, these are the tests that will be used to autograde code.  You are free to open tests in any homework to see what is being tested.
 
-### 3.a) Open the file tests/additional_tests.cpp
-This is a shell of a test written with googletest.  The test is compiled with the file tests/CMakeLists.txt.
+### 3.a) Open the file Homework-Source-Template/tests/unit_tests.cpp
+This a simple test written with googletest.  Make sure you can understand what is being tested in this file.
   
-### 3.b) Edit the TEST method
-Edit this method to make sure that the method return0() returns the number 0.  This can be done with 'ASSERT_EQ(return0(), 0)'.  Additional googletest assertions are described at **http://google.github.io/googletest/reference/assertions.html**
-  
-### 3.c) Test for Correctness
-To test that your code changes and googletest unit tests are working, go back to the build folder and recompile your code ('make').  Then, run the tests with 'make test'.  This will run my provided unit tests (labeled Unit Tests) along with your new test (labeled Additional Tests).
+### 3.b) Test for Correctness
+To test that your code changes and googletest unit tests are working, go back to the build folder and recompile your code ('make').  Then, run the tests with 'make test'.  This will run my provided unit tests.
+![alt text](img/9_googletest.png)
 
 ## 4. Committing Updates to Github Repository
 
