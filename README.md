@@ -43,7 +43,6 @@ Go back into the build directory and run the configuration and compile commands 
 #### Congratulations, you now know the basics of CMake!
   
 ## Part 3 : Googletest
-## Part 3 : Googletest
 Googletest will be used to autograde parts of assignments throughout this course.  You will not need to write googletest for the homeworks.  However, these are the tests that will be used to autograde code.  You are free to open tests in any homework to see what is being tested.
 
 ### 3.a) Open the file Homework-Source-Template/tests/unit_tests.cpp
