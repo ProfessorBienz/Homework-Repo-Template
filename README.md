@@ -1,4 +1,5 @@
 # Homework 0 : GitHub, CMake, and Googletest
+**This README expects you to have some experience typing linux commands.  If you get lost, feel free to check out the [visual README](READMEvis.md).**
 
 ## Part 1 : Checking out a GitHub Classroom Repository
 GitHub Classroom will be used for all homework assignments.  You will be given an initial repository.  Instructions for the assignment will be provided in the README.md.  Follow the steps below to complete the initial GitHub portion of Homework 0.
