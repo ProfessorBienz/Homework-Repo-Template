@@ -43,16 +43,14 @@ Go back into the build directory and run the configuration and compile commands 
 #### Congratulations, you now know the basics of CMake!
   
 ## Part 3 : Googletest
-Googletest will be used to autograde parts of assignments throughout this course.  You will not need to use googletest for the homeworks.  However, you will have the option of submitting your own tests for each homework for extra credit.
+## Part 3 : Googletest
+Googletest will be used to autograde parts of assignments throughout this course.  You will not need to write googletest for the homeworks.  However, these are the tests that will be used to autograde code.  You are free to open tests in any homework to see what is being tested.
 
-### 3.a) Open the file tests/additional_tests.cpp
-This is a shell of a test written with googletest.  The test is compiled with the file tests/CMakeLists.txt.
+### 3.a) Open the file Homework-Source-Template/tests/unit_tests.cpp
+This a simple test written with googletest.  Make sure you can understand what is being tested in this file.
   
-### 3.b) Edit the TEST method
-Edit this method to make sure that the method return0() returns the number 0.  This can be done with 'ASSERT_EQ(return0(), 0)'.  Additional googletest assertions are described at **http://google.github.io/googletest/reference/assertions.html**
-  
-### 3.c) Test for Correctness
-To test that your code changes and googletest unit tests are working, go back to the build folder and recompile your code ('make').  Then, run the tests with 'make test'.  This will run my provided unit tests (labeled Unit Tests) along with your new test (labeled Additional Tests).
+### 3.b) Test for Correctness
+To test that your code changes and googletest unit tests are working, go back to the build folder and recompile your code ('make').  Then, run the tests with 'make test'.  This will run my provided unit tests.
 
 ## 4. Committing Updates to Github Repository
 
